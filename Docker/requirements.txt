@@ -1,4 +1,0 @@
-vanna[ollama,mysql]
-fastapi
-mysql-connector-python
-chromadb
