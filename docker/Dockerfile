@@ -1,11 +1,9 @@
 FROM python:3.11-slim
 
 WORKDIR /app
+COPY ./requirements.txt .
 
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
+RUN  pip install -r requirements.txt
 COPY . .
-
-# Run FastAPI with multiple workers
-CMD ["uvicorn", "app:server", "--host", "0.0.0.0", "--port", "8000", "--workers", "2"]
+EXPOSE 5000
+CMD ["python", "app.py"]

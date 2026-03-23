@@ -1,4 +1,2 @@
-vanna[ollama,mysql]
-fastapi
-mysql-connector-python
-chromadb
+vanna[flask,ollama,mysql,chromadb,httpx]
+uvicorn
